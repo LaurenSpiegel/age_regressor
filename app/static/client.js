@@ -8,6 +8,7 @@ function showPicked(input) {
     reader.onload = function (e) {
         el('image-picked').src = e.target.result;
         el('image-picked').className = '';
+        el('image-picked').style.filter = '';
     }
     reader.readAsDataURL(input.files[0]);
     el('original').style.display = 'none'
@@ -28,7 +29,8 @@ function analyze() {
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
-            el('result-label').innerHTML = `You look ${response['result']} and <b>OH SO FINE</b>!!!`;
+            el('image-picked').style.filter = 'blur(2px)';
+            el('result-label').innerHTML = `You look ${response['result']} and <b><i>OH SO FINE</i></b>!!!`;
         }
         el('analyze-button').innerHTML = 'Get 10 Years Younger';
     }

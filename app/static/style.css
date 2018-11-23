@@ -18,10 +18,33 @@ body {
 .title {
     font-size: 60px;
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.1em;
     color: #262626;
     font-family: helvetica;
     font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 20em; */
+    color: #262626;
+    font-family: helvetica;
+    font-weight: bold;
+}
+
+#grad1 {
+    background: red;
+    background: -webkit-linear-gradient(left,green, cyan, blue, violet);
+    background: -o-linear-gradient(right, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, green, cyan, blue, violet);
+    background: linear-gradient(to right, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
 }
 
 .default {
@@ -45,9 +68,15 @@ body {
 
 .result-label {
     margin-top: 0.5em;
+    margin-bottom: 0.3em;
     padding: 10px;
-    font-size: 30px;
+    font-size: 35px;
     font-family: helvetica;
+}
+
+.attribution {
+    font-family: helvetica;
+    font-size: 8px;
 }
 
 button.choose-file-button {
